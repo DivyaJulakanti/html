@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="form.css"> -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 100%;
+        }
+        .header{
+            background: #f8f9fa;
+            padding: 15px;
+            text-align: center;  
+            background-color: beige;
+            height:20px;
+
+
+        }
+        .mainnav {
+            display: flex; 
+            flex-direction: row;
+        }
+        .nav1{
+            width:50%;
+
+            height:20px;
+            text-align: center;
+            height:100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-items: center;
+            
+            
+        }
+        .nav1 p {
+            flex-grow: 1; 
+            text-align: center;
+        }
+
+        .nav2{
+            
+         
+            width: 50%;
+            height: 100px;
+            margin-right: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: right;
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        .mainnav2{
+            height: 300px;
+            color: #f0f0f0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            background-image: url("img1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          
+        }
+        .maincontainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        
+        }
+        .submain1{
+            width:45%;
+            height:720px;
+          
+            text-align: center;
+        }
+        .submain1 h1{
+            font-size: 40px;
+            color: rgb(4, 82, 226);
+            
+
+        }
+        .submain1 h3{
+            padding-top: 15px;
+            font-size: 18px;
+        }
+        .submain1 p{
+            padding-top: 15px;
+            line-height: 23px;
+        }
+        .indent{
+            text-indent: 100px;
+            text-align: justify;
+            font-size: 18px;        
+        }
+        .submain2{
+            width:25%;
+            height:720px;        
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .submain2 button{
+            width:80%;
+            height: 45px;
+            background-color: #f0f0f0;
+            border: none; 
+            margin: 5px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        ul {
+            padding-left: 20px; 
+            list-style-position: inside;
+            text-align: left;
+            line-height: 23px;
+        }
+       
+        .contact {
+            height: 450px;
+            width: 80%;
+            background-color: rgba(245, 245, 245, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            margin-top: 30px;
+            background-image: url("contactus.png");
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .contact p{
+            padding: 15px;
+            font-size: 20px;
+        }
+        .button{
+            width:50%;
+            height:60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+
+        .software{
+            width: 45%;
+            height:150px;
+            color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+           flex-direction: column;
+            text-align: left;
+        }
+        
+        .quote{
+            width: 25%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: right;   
+        }
+        .quote button{
+            width:40%;
+            background-color: rgb(4, 82, 226);
+            color: #f0f8ff;
+            font-size: 15px;
+            height:50px;border: none;   
+        }
+
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 70%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc; 
+        }
+
+        .panel {
+            width: 70%;
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        .information{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            background-color: rgb(3, 3, 61);
+
+        }
+        .info1{
+            height: 300px;
+            width:18%;
+            color: #f0f8ff;
+            margin-top: 50px;
+        }
+        .info1 p{
+            line-height: 23px;
+        }
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(3, 3, 61);
+            color: white;
+            margin-top: 1px;
+        }
+        
+       
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p><i class="fa-solid fa-phone-volume"></i>&nbsp;&nbsp;contact: +91 9100364345 | <i class="fa-solid fa-envelope"></i></i>&nbsp;&nbsp;Email: contact@appzontechnologies.com |&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-twitter"></i></p>
+        </div>
+        <div class="mainnav">
+            <div class="nav1">
+                <img src="logo.png" alt="Trulli" width="250px" height="90px">
+                <p>Home</p>
+                <p>Company</p>
+                <p>Our Products</p>
+                <p>Our services</p>
+                <p>Careers</p>
+                <p>Contact</p>
+            </div>
+            <div class="nav2">
+                <p style="padding-right: 40px;"><i class="fa-solid fa-phone-volume" style="height: 10px;"></i>&nbsp;&nbsp;Contact US</p>
+                <p>+91 9100364345</p>
+
+            </div>
+        </div>
+        <div class="mainnav2">
+            <p><b>Human Resource Management System Software</b></p>
+            <P style="font-size: 15PX;">Home &nbsp;&nbsp;<i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;Our Product &nbsp;&nbsp;<i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i>&nbsp;&nbsp;Human Resource Management System Software</P>
+           
+
+        </div>
+        <div class="maincontainer">
+            <div class="submain1">
+                <h1>
+                   <b> Human Resource Management System Software - Appzon Technologies</b>
+                </h1>
+                <p class="indent">As an Human Resource Management System Software – Appzon Technologies service provider, we are dedicated to providing comprehensive and reliable 
+                    HRMS solutions to help businesses manage their human resources more efficiently and effectively. Our team of experts is experienced in HRMS implementation,
+                    customization, and support.</p>
+                <h3> Our HRMS solutions include a wide range of features and functionalities, including</h3>
+                <ul>
+                    <li>Employee Information Management,</li>
+                    <li>Attendance Tracking,</li>
+                    <li>Leave Management,</li>
+                    <li>Payroll Management,</li>
+                    <li>Performance Management,</li>
+                    <li>Employee Self-Service. </li>
+                </ul>
+            
+                <p class="indent">We understand the unique needs and requirements of different businesses and provide customized solutions to meet their specific needs and We believe in
+                     the importance of data security and privacy and ensure that our HRMS solutions comply with the latest data protection regulations. Our systems are 
+                     designed to provide high-level security to ensure that our clients’ sensitive data is protected.</p>
+                <p class="indent">At our HRMS services, we are committed to providing high-quality services that meet the needs of our clients. Our focus is on building long-term 
+                    relationships with our clients by providing reliable, efficient, and cost-effective HRMS solutions that help them streamline their HR processes and
+                     focus on their core business activities.</p>
+                <p class="indent">    In conclusion, at our HRMS services, we are dedicated to providing comprehensive and reliable HRMS solutions that help businesses manage their human 
+                    resources more efficiently and effectively. Our focus is on providing customized solutions that meet the unique needs of our clients and building long-term 
+                    relationships based on trust and reliability. Human Resource Management System Software</p>
+
+            </div>
+            <div class="submain2">
+                <button>Hospital Management Software</button>
+                <button>School Management System</button>
+                <button>Human Resources Software</button>
+                <button>Restaurant Management Software</button>
+                <div class="backgroundimage">
+                    <div class="contact">
+                        <p>Contact us now</p>
+                        <p>If need help!</p>
+                        <h1>9100364345</h1>
+                        <p>or go to contact form:</p>
+                        <div class="button">
+                                <button style="width: 75%;">Let's start now</button><button style="width: 25%; background-color:rgb(4, 82, 226); ;"><i class="fa-solid fa-link"></i></button>
+                        </div>
+
+                    </div>
+              </div>
+
+            </div>
+            
+
+        </div>
+        <div class="maincontainer" style=" background-color: rgb(3, 3, 61);">
+            <div class="software">
+                <h1>Intrested on our Software Products</h2>
+                    <p>Feel free to contact us for our Products &  We develop Custom software Based on the Client Requirements.</p>
+
+            </div>
+            <div class="quote">
+                <button><b>get a quote</b></button>
+
+            </div>
+
+        </div>
+        <div class="main">
+            <button class="accordion">What is human resources management software?</button>
+            <div class="panel">
+                <p>Human resources management software (HRMS) is a software application that helps organizations manage and automate their HR operations, including 
+                    recruiting, hiring, employee management, payroll, benefits administration, and more.</p>
+            </div>
+
+            <button class="accordion">What are the benefits of using HRMS?</button>
+            <div class="panel">
+                <p>HRMS can bring numerous benefits to an organization, such as improved efficiency, cost savings, accuracy, compliance, better decision making, 
+                    and enhanced employee experience.</p>
+            </div>
+
+            <button class="accordion">What features should I look for in HRMS?</button>
+            <div class="panel">
+                <p>The features you should look for in HRMS depend on your organization’s needs. However, some common features include applicant tracking, onboarding, 
+                    performance management, time and attendance, payroll processing, benefits administration, and employee self-service.</p>
+            </div>
+            <button class="accordion">How much does HRMS cost?</button>
+            <div class="panel">
+                <p>The cost of HRMS varies depending on the vendor, the features, the number of users, and the implementation options. Some vendors charge a monthly or 
+                    annual subscription fee, while others charge a one-time license fee. It’s essential to compare vendors and get quotes from multiple providers to determine
+                    the cost that fits your budget.</p>
+
+            </div>
+            <button class="accordion">Is HRMS easy to use?</button>
+            <div class="panel">
+                <p>HRMS can vary in ease of use, depending on the vendor and the features. However, many HRMS vendors design their software to be user-friendly and intuitive,
+                    with easy-to-navigate interfaces and customizable options.</p>
+            </div>
+            <button class="accordion">Is HRMS secure?</button>
+            <div class="panel">
+                <p>Security is a critical consideration when selecting an HRMS vendor. You want to make sure that the software provider offers data encryption, access controls, 
+                    backups, and disaster recovery plans to protect your sensitive employee information from breaches and cyber threats.</p>
+            </div>
+            <button class="accordion">Can HRMS integrate with other software systems?</button>
+            <div class="panel">
+                <p>Yes, many HRMS vendors offer integrations with other software systems, such as accounting, ERP, or CRM software. This integration can help streamline 
+                    workflows and reduce manual data entry. However, it’s essential to confirm with the vendor that the HRMS can integrate with your other systems before 
+                    purchasing.</p>
+            </div>
+            <button class="accordion">Can HRMS handle compliance requirements?</button>
+            <div class="panel">
+                <p>Yes, HRMS can help organizations comply with federal and state employment laws and regulations. For example, HRMS can track employee hours, overtime,
+                     and vacation time to ensure compliance with labor laws. It can also generate reports to assist with EEOC, OFCCP, and other government agency reporting 
+                     requirements. However, it’s crucial to verify with the vendor that the HRMS can handle the specific compliance needs of your organization.</p>
+            </div>
+
+        </div>
+        <div class="information">
+            <div class="info1">
+                <img src="logo.png" alt="Trulli" width="200px" height="50px">
+                <P>AppZon Technologies was founded with a vision to emerge as one of the leading product development companies.
+                    We are becoming instrumental in assisting organisations through implementing next-generation technologies for better outcome.</P>
+
+            </div>
+
+            <div class="info1" style="text-align: center;">
+                <h3>Quick Links</h3>
+                <p style="padding-right: 50px;">>> Home</p>
+                <p>>> Our Services</p>
+                <p>>> Our Products</p>
+                <p>>> Contact US</p>
+
+            </div>
+            <div class="info1" >
+                <h3>Official info:</h3>
+                <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;SUITE NO: 103, 1st FLOOR, OLBEE CENTER, Opp to INDIAN OIL PETROL PUMP, RAJ BHAVAN ROAD, SOMAJIGUDA,
+                    HYDERABAD-82</p>
+                <p><i class="fa-solid fa-phone-volume" ></i>&nbsp;&nbsp;+91 9100364345</p>
+                <p><i class="fa-solid fa-phone-volume" ></i>&nbsp;&nbsp;040-35573105</p>
+                <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;contact@appzontechnologies.com</p>
+
+            </div>
+            <div class="info1">
+                <h3>Official info:</h3>
+                <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;DR.104-7-930 NEAR AR SYBLES BUILDING, BODDURAI STREET, ETUKURU
+                    GUNTUR 522017</p>
+                <p><i class="fa-solid fa-phone-volume" ></i>&nbsp;&nbsp;+91 9100364345</p>
+                <p><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;contact@appzontechnologies.com</p>
+                <p>Open Hours:</p>
+                <p>Mon – Fri: 10 am – 6 pm,</p>
+                <p>Sat- Sun: CLOSED</p>
+                
+            </div>
+
+        </div>
+        <footer>
+            <p>© 2025 AppZon Technologies All rights reserved.  Andhra Pradesh & Telangana</p>
+           
+          </footer>
+    </div>
+
+
+
+
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+        </script>
+</body>
+</html>
